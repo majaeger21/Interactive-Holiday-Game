@@ -1,0 +1,82 @@
+house images/house.bmp 255 255 255 0
+csBuilding images/cs_building.png
+
+obstacle images/water0.png
+obstacle images/water1.png
+obstacle images/water2.png
+obstacle images/water1.png
+obstacle images/water0.png
+
+frozenWater images/frozen_water0.png
+frozenWater images/frozen_water1.png
+frozenWater images/frozen_water2.png
+
+grass images/grass.png
+grassBrown images/grass_brown.png
+
+
+flowers images/flowers.png
+pumpkin images/pumpkin.png
+
+background_default images/none.bmp
+
+dirt images/dirt.bmp
+dirt_horiz images/dirt_horiz.png
+fall_dirt_bot images/fall_dirt_horiz.png
+
+dirt_vert_left images/dirt_vert_right.png
+fall_dirt_vert_left images/fall_dirt_vert_right.png
+
+dirt_vert_right images/dirt_vert_left.png
+fall_dirt_vert_right images/fall_dirt_vert_left.png
+
+
+dirt_bot_left_corner images/dirt_bot_left_corner.png
+fall_dirt_bot_left_corner images/fall_dirt_bot_left_corner.png
+
+dirt_bot_right_up images/dirt_bot_right_up.png
+fall_dirt_bot_right_up images/fall_dirt_bot_right_up.png
+
+dirt_vert_left_bot images/dirt_vert_left_bot.png
+fall_dirt_vert_left_bot images/fall_dirt_vert_left_bot.png
+
+bridge images/bridge.png
+
+tree images/tree0.png
+tree images/tree1.png
+tree images/tree2.png
+tree images/tree3.png
+tree images/tree4.png
+stump images/stump.png
+
+treeFall images/tree_fall0.png
+treeFall images/tree_fall1.png
+treeFall images/tree_fall2.png
+
+dude images/dude0.png
+dude images/dude1.png
+dude images/dude2.png
+dude images/dude3.png
+student images/student0.png
+student images/student1.png
+student images/student2.png
+scooter images/scooter0.png
+
+fairy images/fairy0.png
+fairy images/fairy1.png
+fairy images/fairy2.png
+fairy images/fairy3.png
+fairy images/fairy4.png
+fairy images/fairy5.png
+fairy images/fairy6.png
+fairy images/fairy7.png
+
+turkey images/turkeyillustrator0.png
+turkey images/turkeyillustrator1.png
+turkey images/turkeyillustrator2.png
+
+sapling images/sapling0.png
+sapling images/sapling1.png
+sapling images/sapling2.png
+sapling images/sapling3.png
+sapling images/sapling4.png
