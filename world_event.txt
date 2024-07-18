@@ -1,0 +1,45 @@
+1. how to trigger the event
+
+
+In order to trigger the event, you must click anywhere in the game. This changes a square portion of the game’s
+background. However, the new entity will not be spawned until you click on the upper left house.
+
+
+2. what should happen when the event is triggered
+
+
+When the event is triggered, a variety of changes will occur. First, the overall theme of the game will transform
+into a fall Cal Poly setting. The houses will become the CS building, the river is icy, and the flowers become pumpkins.
+The tree leaves become colorful matching the fall setting. We also change the path to look like a road.
+
+
+The appearance of our entities also changes. The Dudes become Scooter entities and the fairies become turkeys.
+When the upper left house is clicked, a student entity spawns that can be moved using the WASD keys.
+Once the student is spawned the turkeys immediately begin chasing it using A star.
+
+
+
+3. what the affected entities should do
+
+
+The nearest star entity will transform into a turkey entity that uses A-star to chase the spawned student entity.
+The student entity is spawned at the location of the house and moves using WASD keys.
+The view changes along with the WASD keys in order to keep the student in the center.
+All of the dudes will change into scooters and move randomly.
+
+
+4. what the new entity is and how it should behave
+
+The new entity is the student entity. The goal of this entity is to not get caught by the turkeys.
+The student moves using WASD keys and stays viewed in the center.
+
+
+5. (if applicable) the names of each partner and what each partner was responsible for
+
+
+Partners: Meyli Jaeger and Hallie Christopherson
+
+
+Both partners brainstormed ideas for the project and agreed on a final design. Meyli worked on changing the entities.
+This included creating the new student entity and changing the movement speeds so that the target wasn’t reached instantly.
+Hallie worked on changing the background images and designed the different pictures to animate using Adobe illustrator.
