@@ -1,0 +1,276 @@
+<mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" background="none" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="node19" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Action&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ executeAction(EventScheduler): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="749" y="766" width="271" height="66" as="geometry" />
+    </mxCell>
+    <mxCell id="node6" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;ActionKind&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ ACTIVITY: &lt;br/&gt;+ ANIMATION: &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ valueOf(String): ActionKind&lt;br/&gt;+ values(): ActionKind[]&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2188" y="841" width="222" height="151" as="geometry" />
+    </mxCell>
+    <mxCell id="node24" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Activity&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- imageStore: ImageStore&lt;br/&gt;- entity: Executeable&lt;br/&gt;- world: WorldModel&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ executeAction(EventScheduler): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1010" y="465" width="271" height="131" as="geometry" />
+    </mxCell>
+    <mxCell id="node21" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Animation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- entity: Scheduleable&lt;br/&gt;- repeatCount: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ executeAction(EventScheduler): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="421" y="966" width="271" height="107" as="geometry" />
+    </mxCell>
+    <mxCell id="node2" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Background&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- imageIndex: int&lt;br/&gt;- id: String&lt;br/&gt;- images: List&amp;lt;PImage&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getCurrentImage(Background): PImage&lt;br/&gt;+ getImageIndex(): int&lt;br/&gt;+ getimages(): List&amp;lt;PImage&amp;gt;&lt;br/&gt;+ setBackgroundCell(WorldModel, Point): void&lt;br/&gt;+ setBackground(WorldModel, Point): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1136" y="652" width="314" height="209" as="geometry" />
+    </mxCell>
+    <mxCell id="node13" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DudeFull&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- resourceLimit: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;~ nextPosition(WorldModel, Point): Point&lt;br/&gt;~ scheduleActions(EventScheduler, WorldModel, ImageStore): void&lt;br/&gt;+ transform(WorldModel, EventScheduler, ImageStore): boolean&lt;br/&gt;~ moveTo(WorldModel, Entity, EventScheduler): boolean&lt;br/&gt;+ executeActivity(WorldModel, ImageStore, EventScheduler): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1349" y="398" width="441" height="165" as="geometry" />
+    </mxCell>
+    <mxCell id="node14" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;DudeNotFull&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- resourceLimit: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;~ scheduleActions(EventScheduler, WorldModel, ImageStore): void&lt;br/&gt;~ nextPosition(WorldModel, Point): Point&lt;br/&gt;~ moveTo(WorldModel, Entity, EventScheduler): boolean&lt;br/&gt;+ transform(WorldModel, EventScheduler, ImageStore): boolean&lt;br/&gt;+ executeActivity(WorldModel, ImageStore, EventScheduler): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="509" y="395" width="441" height="165" as="geometry" />
+    </mxCell>
+    <mxCell id="node25" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Entity&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- images: List&amp;lt;PImage&amp;gt;&lt;br/&gt;+ position: Point&lt;br/&gt;- health: int&lt;br/&gt;- id: String&lt;br/&gt;- imageIndex: int&lt;br/&gt;- resourceCount: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getPosition(): Point&lt;br/&gt;+ getNumFromRange(int, int): int&lt;br/&gt;+ getimages(): List&amp;lt;PImage&amp;gt;&lt;br/&gt;+ setHealth(): void&lt;br/&gt;+ nextImage(): void&lt;br/&gt;+ removeEntity(WorldModel): void&lt;br/&gt;+ getHealth(): int&lt;br/&gt;+ setResourceCount(): void&lt;br/&gt;+ getid(): String&lt;br/&gt;+ getResourceCount(): int&lt;br/&gt;+ setHealth2(): void&lt;br/&gt;+ getCurrentImage(Entity): PImage&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1960" y="-14" width="247" height="429" as="geometry" />
+    </mxCell>
+    <mxCell id="node16" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;EntityKind&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ HOUSE: &lt;br/&gt;+ STUMP: &lt;br/&gt;+ FAIRY: &lt;br/&gt;+ DUDE_NOT_FULL: &lt;br/&gt;+ OBSTACLE: &lt;br/&gt;+ DUDE_FULL: &lt;br/&gt;+ TREE: &lt;br/&gt;+ SAPLING: &lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ values(): EntityKind[]&lt;br/&gt;+ valueOf(String): EntityKind&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="682" y="1455" width="218" height="253" as="geometry" />
+    </mxCell>
+    <mxCell id="node11" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Event&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- time: long&lt;br/&gt;- action: Action&lt;br/&gt;- entity: Entity&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getTime(): long&lt;br/&gt;+ getAction(): Action&lt;br/&gt;+ removePendingEvent(EventScheduler): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1675" y="1017" width="312" height="165" as="geometry" />
+    </mxCell>
+    <mxCell id="node26" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;EventComparator&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ compare(Event, Event): int&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1537" y="634" width="207" height="57" as="geometry" />
+    </mxCell>
+    <mxCell id="node15" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;EventScheduler&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- eventQueue: PriorityQueue&amp;lt;Event&amp;gt;&lt;br/&gt;- timeScale: double&lt;br/&gt;- pendingEvents: Map&amp;lt;Entity, List&amp;lt;Event&amp;gt;&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ updateOnTime(long): void&lt;br/&gt;+ scheduleEvent(Entity, Action, long): void&lt;br/&gt;+ getPendingEvents(): Map&amp;lt;Entity, List&amp;lt;Event&amp;gt;&amp;gt;&lt;br/&gt;+ unscheduleAllEvents(Entity): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2817" y="781" width="332" height="187" as="geometry" />
+    </mxCell>
+    <mxCell id="node5" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Executeable&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ executeActivity(WorldModel, ImageStore, EventScheduler): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1084" y="282" width="433" height="66" as="geometry" />
+    </mxCell>
+    <mxCell id="node1" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Fairy&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;~ nextPosition(WorldModel, Point): Point&lt;br/&gt;~ moveTo(WorldModel, Entity, EventScheduler): boolean&lt;br/&gt;~ scheduleActions(EventScheduler, WorldModel, ImageStore): void&lt;br/&gt;+ executeActivity(WorldModel, ImageStore, EventScheduler): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="-90" y="825" width="441" height="129" as="geometry" />
+    </mxCell>
+    <mxCell id="node23" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Functions&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- KEYED_BLUE_IDX: int&lt;br/&gt;+ STUMP_KEY: String&lt;br/&gt;+ TREE_HEALTH_MAX: int&lt;br/&gt;- OBSTACLE_ROW: int&lt;br/&gt;+ PROPERTY_KEY: int&lt;br/&gt;+ BGND_ROW: int&lt;br/&gt;- FAIRY_COL: int&lt;br/&gt;- TREE_NUM_PROPERTIES: int&lt;br/&gt;+ HOUSE_KEY: String&lt;br/&gt;- COLOR_MASK: int&lt;br/&gt;+ TREE_ANIMATION_MAX: int&lt;br/&gt;- OBSTACLE_ANIMATION_PERIOD: int&lt;br/&gt;+ TREE_ACTION_MIN: int&lt;br/&gt;- DUDE_ANIMATION_PERIOD: int&lt;br/&gt;+ DUDE_KEY: String&lt;br/&gt;- FAIRY_NUM_PROPERTIES: int&lt;br/&gt;+ TREE_KEY: String&lt;br/&gt;- HOUSE_ID: int&lt;br/&gt;- KEYED_GREEN_IDX: int&lt;br/&gt;- DUDE_ROW: int&lt;br/&gt;+ BGND_ID: int&lt;br/&gt;- OBSTACLE_COL: int&lt;br/&gt;- KEYED_IMAGE_MIN: int&lt;br/&gt;- rand: Random&lt;br/&gt;+ BGND_KEY: String&lt;br/&gt;+ SAPLING_HEALTH_LIMIT: int&lt;br/&gt;- TREE_ANIMATION_PERIOD: int&lt;br/&gt;- DUDE_LIMIT: int&lt;br/&gt;- FAIRY_ACTION_PERIOD: int&lt;br/&gt;- SAPLING_NUM_PROPERTIES: int&lt;br/&gt;+ TREE_HEALTH_MIN: int&lt;br/&gt;+ TREE_ACTION_MAX: int&lt;br/&gt;- TREE_HEALTH: int&lt;br/&gt;- SAPLING_ID: int&lt;br/&gt;- HOUSE_COL: int&lt;br/&gt;- TREE_ACTION_PERIOD: int&lt;br/&gt;+ BGND_NUM_PROPERTIES: int&lt;br/&gt;+ SAPLING_KEY: String&lt;br/&gt;- DUDE_NUM_PROPERTIES: int&lt;br/&gt;- SAPLING_HEALTH: int&lt;br/&gt;+ FAIRY_KEY: String&lt;br/&gt;- TREE_ID: int&lt;br/&gt;+ TREE_ANIMATION_MIN: int&lt;br/&gt;- TREE_ROW: int&lt;br/&gt;- FAIRY_ID: int&lt;br/&gt;- HOUSE_NUM_PROPERTIES: int&lt;br/&gt;- TREE_COL: int&lt;br/&gt;- SAPLING_ROW: int&lt;br/&gt;- DUDE_ID: int&lt;br/&gt;+ SAPLING_ACTION_ANIMATION_PERIOD: int&lt;br/&gt;- FAIRY_ROW: int&lt;br/&gt;- HOUSE_ROW: int&lt;br/&gt;- FAIRY_ANIMATION_PERIOD: int&lt;br/&gt;- SAPLING_COL: int&lt;br/&gt;- OBSTACLE_ID: int&lt;br/&gt;- KEYED_RED_IDX: int&lt;br/&gt;- OBSTACLE_NUM_PROPERTIES: int&lt;br/&gt;+ OBSTACLE_KEY: String&lt;br/&gt;- PATH_KEYS: List&amp;lt;String&amp;gt;&lt;br/&gt;+ BGND_COL: int&lt;br/&gt;- DUDE_COL: int&lt;br/&gt;- DUDE_ACTION_PERIOD: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ parseHouse(String[], WorldModel, ImageStore): boolean&lt;br/&gt;+ processImageLine(Map&amp;lt;String, List&amp;lt;PImage&amp;gt;&amp;gt;, String, PApplet): void&lt;br/&gt;+ parseSapling(String[], WorldModel, ImageStore): boolean&lt;br/&gt;+ parseObstacle(String[], WorldModel, ImageStore): boolean&lt;br/&gt;+ clamp(int, int, int): int&lt;br/&gt;+ parseFairy(String[], WorldModel, ImageStore): boolean&lt;br/&gt;+ setAlpha(PImage, int, int): void&lt;br/&gt;+ parseDude(String[], WorldModel, ImageStore): boolean&lt;br/&gt;+ getImages(Map&amp;lt;String, List&amp;lt;PImage&amp;gt;&amp;gt;, String): List&amp;lt;PImage&amp;gt;&lt;br/&gt;+ parseTree(String[], WorldModel, ImageStore): boolean&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1564" y="1254" width="468" height="1617" as="geometry" />
+    </mxCell>
+    <mxCell id="node9" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;House&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2386" y="509" width="98" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node3" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ImageStore&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- images: Map&amp;lt;String, List&amp;lt;PImage&amp;gt;&amp;gt;&lt;br/&gt;- defaultImages: List&amp;lt;PImage&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ parseBackground(String[], WorldModel): boolean&lt;br/&gt;+ getImageList(String): List&amp;lt;PImage&amp;gt;&lt;br/&gt;+ loadImages(Scanner, PApplet): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1511" y="813" width="346" height="143" as="geometry" />
+    </mxCell>
+    <mxCell id="node18" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Moveable&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;~ moveTo(WorldModel, Entity, EventScheduler): boolean&lt;br/&gt;~ nextPosition(WorldModel, Point): Point&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="301" y="689" width="374" height="81" as="geometry" />
+    </mxCell>
+    <mxCell id="node0" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Obstacle&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;~ scheduleActions(EventScheduler, WorldModel, ImageStore): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2315" y="679" width="441" height="57" as="geometry" />
+    </mxCell>
+    <mxCell id="node4" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Point&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- x: int&lt;br/&gt;- y: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ equals(Object): boolean&lt;br/&gt;+ getY(): int&lt;br/&gt;+ distanceSquared(Point): int&lt;br/&gt;+ nearestEntity(List&amp;lt;Entity&amp;gt;): Optional&amp;lt;Entity&amp;gt;&lt;br/&gt;+ hashCode(): int&lt;br/&gt;+ adjacent(Point): boolean&lt;br/&gt;+ toString(): String&lt;br/&gt;+ getOccupancyCell(WorldModel): Entity&lt;br/&gt;+ getX(): int&lt;br/&gt;+ setOccupancyCell(WorldModel, Entity): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2107" y="1029" width="320" height="297" as="geometry" />
+    </mxCell>
+    <mxCell id="node10" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Sapling&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- healthLimit: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ executeActivity(WorldModel, ImageStore, EventScheduler): void&lt;br/&gt;+ transform(WorldModel, EventScheduler, ImageStore): boolean&lt;br/&gt;~ scheduleActions(EventScheduler, WorldModel, ImageStore): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2552" y="334" width="441" height="131" as="geometry" />
+    </mxCell>
+    <mxCell id="node12" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Scheduleable&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- animationPeriod: int&lt;br/&gt;- actionPeriod: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;~ scheduleActions(EventScheduler, WorldModel, ImageStore): void&lt;br/&gt;+ getAnimationPeriod(): int&lt;br/&gt;+ getActionPeriod(): int&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1853" y="476" width="441" height="143" as="geometry" />
+    </mxCell>
+    <mxCell id="node8" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Stump&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2334" y="329" width="99" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node7" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;Transformable&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ transform(WorldModel, EventScheduler, ImageStore): boolean&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1833" y="697" width="422" height="66" as="geometry" />
+    </mxCell>
+    <mxCell id="node22" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Tree&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ executeActivity(WorldModel, ImageStore, EventScheduler): void&lt;br/&gt;~ scheduleActions(EventScheduler, WorldModel, ImageStore): void&lt;br/&gt;+ transform(WorldModel, EventScheduler, ImageStore): boolean&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2666" y="522" width="441" height="105" as="geometry" />
+    </mxCell>
+    <mxCell id="node28" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Viewport&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- numCols: int&lt;br/&gt;- numRows: int&lt;br/&gt;- col: int&lt;br/&gt;- row: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ shift(int, int): void&lt;br/&gt;+ getRow(): int&lt;br/&gt;+ viewportToWorld(int, int): Point&lt;br/&gt;+ getNumRows(): int&lt;br/&gt;+ contains(Point): boolean&lt;br/&gt;+ getNumCols(): int&lt;br/&gt;+ getCol(): int&lt;br/&gt;+ worldToViewport(int, int): Point&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="1218" y="979" width="233" height="297" as="geometry" />
+    </mxCell>
+    <mxCell id="node17" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;VirtualWorld&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- DEFAULT_IMAGE_NAME: String&lt;br/&gt;- view: WorldView&lt;br/&gt;- IMAGE_LIST_FILE_NAME: String&lt;br/&gt;- WORLD_HEIGHT_SCALE: int&lt;br/&gt;- FAST_FLAG: String&lt;br/&gt;- world: WorldModel&lt;br/&gt;- TILE_HEIGHT: int&lt;br/&gt;- FAST_SCALE: double&lt;br/&gt;- FASTER_FLAG: String&lt;br/&gt;- scheduler: EventScheduler&lt;br/&gt;- nextTime: long&lt;br/&gt;- timeScale: double&lt;br/&gt;- VIEW_WIDTH: int&lt;br/&gt;- TILE_WIDTH: int&lt;br/&gt;- FASTEST_FLAG: String&lt;br/&gt;- VIEW_COLS: int&lt;br/&gt;- WORLD_COLS: int&lt;br/&gt;- DEFAULT_IMAGE_COLOR: int&lt;br/&gt;- WORLD_ROWS: int&lt;br/&gt;- WORLD_WIDTH_SCALE: int&lt;br/&gt;- LOAD_FILE_NAME: String&lt;br/&gt;- FASTER_SCALE: double&lt;br/&gt;- FASTEST_SCALE: double&lt;br/&gt;- TIMER_ACTION_PERIOD: int&lt;br/&gt;- imageStore: ImageStore&lt;br/&gt;- VIEW_ROWS: int&lt;br/&gt;- VIEW_HEIGHT: int&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ settings(): void&lt;br/&gt;+ setup(): void&lt;br/&gt;+ mousePressed(): void&lt;br/&gt;+ createDefaultBackground(ImageStore): Background&lt;br/&gt;- mouseToPoint(int, int): Point&lt;br/&gt;+ main(String[]): void&lt;br/&gt;+ parseCommandLine(String[]): void&lt;br/&gt;+ keyPressed(): void&lt;br/&gt;~ loadImages(String, ImageStore, PApplet): void&lt;br/&gt;+ scheduleActions(WorldModel, EventScheduler, ImageStore): void&lt;br/&gt;+ draw(): void&lt;br/&gt;+ createImageColored(int, int, int): PImage&lt;br/&gt;+ loadWorld(WorldModel, String, ImageStore): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="3209" y="268" width="441" height="913" as="geometry" />
+    </mxCell>
+    <mxCell id="node20" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;WorldModel&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- numCols: int&lt;br/&gt;+ occupancy: Entity[][]&lt;br/&gt;- numRows: int&lt;br/&gt;- entities: Set&amp;lt;Entity&amp;gt;&lt;br/&gt;+ background: Background[][]&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ withinBounds(Point): boolean&lt;br/&gt;+ getOccupant(Point): Optional&amp;lt;Entity&amp;gt;&lt;br/&gt;+ removeEntityAt(Point): void&lt;br/&gt;+ addEntity(Entity): void&lt;br/&gt;+ isOccupied(Point): boolean&lt;br/&gt;+ tryAddEntity(Entity): void&lt;br/&gt;+ processLine(String, ImageStore): boolean&lt;br/&gt;+ getEntities(): Set&amp;lt;Entity&amp;gt;&lt;br/&gt;+ moveEntity(Entity, Point): void&lt;br/&gt;+ getBackgroundImage(Point): Optional&amp;lt;PImage&amp;gt;&lt;br/&gt;+ getNumRows(): int&lt;br/&gt;+ getBackgroundCell(Point): Background&lt;br/&gt;+ load(Scanner, ImageStore): void&lt;br/&gt;+ getNumCols(): int&lt;br/&gt;+ findNearest(Point, List&amp;lt;Class&amp;gt;): Optional&amp;lt;Entity&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="752" y="921" width="347" height="473" as="geometry" />
+    </mxCell>
+    <mxCell id="node27" parent="1" vertex="1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;WorldView&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;- world: WorldModel&lt;br/&gt;- tileHeight: int&lt;br/&gt;- screen: PApplet&lt;br/&gt;- tileWidth: int&lt;br/&gt;- viewport: Viewport&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getViewport(): Viewport&lt;br/&gt;+ shiftView(int, int): void&lt;br/&gt;+ drawViewport(): void&lt;br/&gt;+ drawBackground(): void&lt;br/&gt;+ drawEntities(): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;">
+      <mxGeometry x="2518" y="968" width="192" height="253" as="geometry" />
+    </mxCell>
+    <mxCell id="edge6" edge="1" value="" parent="1" source="node24" target="node19" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.383;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=0.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1114" y="713" />
+          <mxPoint x="885" y="713" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge13" edge="1" value="" parent="1" source="node21" target="node19" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.500;entryY=0.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="732" y="1015" />
+          <mxPoint x="732" y="713" />
+          <mxPoint x="885" y="713" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge20" edge="1" value="" parent="1" source="node13" target="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1570" y="366" />
+          <mxPoint x="1301" y="366" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge14" edge="1" value="" parent="1" source="node13" target="node18" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.375;exitY=1.000;exitDx=0;exitDy=0;entryX=0.460;entryY=0.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1515" y="631" />
+          <mxPoint x="473" y="631" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge10" edge="1" value="" parent="1" source="node13" target="node7" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.970;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=0.001;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1777" y="661" />
+          <mxPoint x="2044" y="661" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge5" edge="1" value="" parent="1" source="node14" target="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="729" y="366" />
+          <mxPoint x="1301" y="366" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge8" edge="1" value="" parent="1" source="node14" target="node18" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.460;entryY=0.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="729" y="631" />
+          <mxPoint x="473" y="631" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge0" edge="1" value="" parent="1" source="node14" target="node7" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.466;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=0.001;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="714" y="-31" />
+          <mxPoint x="3125" y="-31" />
+          <mxPoint x="3125" y="661" />
+          <mxPoint x="2044" y="661" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge12" edge="1" value="" parent="1" source="node1" target="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="131" y="610" />
+          <mxPoint x="116" y="610" />
+          <mxPoint x="116" y="366" />
+          <mxPoint x="1301" y="366" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge18" edge="1" value="" parent="1" source="node1" target="node18" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.466;exitY=0.000;exitDx=0;exitDy=0;entryX=0.460;entryY=0.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="116" y="631" />
+          <mxPoint x="473" y="631" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge16" edge="1" value="" parent="1" source="node9" target="node25" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="2314" y="523" />
+          <mxPoint x="2314" y="201" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge9" edge="1" value="" parent="1" source="node18" target="node12" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=1.000;entryY=0.546;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="488" y="-46" />
+          <mxPoint x="2535" y="-46" />
+          <mxPoint x="2535" y="482" />
+          <mxPoint x="2520" y="482" />
+          <mxPoint x="2520" y="554" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge17" edge="1" value="" parent="1" source="node0" target="node12" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.464;exitY=0.001;exitDx=0;exitDy=0;entryX=1.000;entryY=0.546;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="2520" y="554" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge3" edge="1" value="" parent="1" source="node10" target="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.000;exitY=0.817;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1860" y="433" />
+          <mxPoint x="1860" y="366" />
+          <mxPoint x="1301" y="366" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge2" edge="1" value="" parent="1" source="node10" target="node12" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=1.000;entryY=0.546;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="2773" y="482" />
+          <mxPoint x="2520" y="482" />
+          <mxPoint x="2520" y="554" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge1" edge="1" value="" parent="1" source="node10" target="node7" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.500;entryY=0.001;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="3125" y="394" />
+          <mxPoint x="3125" y="661" />
+          <mxPoint x="2044" y="661" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge11" edge="1" value="" parent="1" source="node12" target="node25" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=1.000;exitY=0.441;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="2314" y="539" />
+          <mxPoint x="2314" y="201" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge15" edge="1" value="" parent="1" source="node8" target="node25" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="2314" y="343" />
+          <mxPoint x="2314" y="201" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge19" edge="1" value="" parent="1" source="node22" target="node5" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=1.000;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="2887" y="641" />
+          <mxPoint x="1762" y="641" />
+          <mxPoint x="1762" y="610" />
+          <mxPoint x="116" y="610" />
+          <mxPoint x="116" y="366" />
+          <mxPoint x="1301" y="366" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge4" edge="1" value="" parent="1" source="node22" target="node12" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=0;startArrow=none;endArrow=block;endSize=12;strokeColor=#589df6;exitX=0.500;exitY=0.000;exitDx=0;exitDy=0;entryX=1.000;entryY=0.546;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="2887" y="482" />
+          <mxPoint x="2520" y="482" />
+          <mxPoint x="2520" y="554" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="edge7" edge="1" value="" parent="1" source="node22" target="node7" style="html=1;rounded=1;edgeStyle=orthogonalEdgeStyle;dashed=1;startArrow=none;endArrow=block;endSize=12;strokeColor=#609350;exitX=0.534;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=0.001;entryDx=0;entryDy=0;">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="2902" y="661" />
+          <mxPoint x="2044" y="661" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
