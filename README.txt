@@ -1,5 +1,4 @@
 Virtual World Project
-CSC 203, Fall '22
 
 Simulation Rules:
 
